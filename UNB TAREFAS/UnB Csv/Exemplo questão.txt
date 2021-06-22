@@ -1,0 +1,33 @@
+2 8
+
+horse_040
+brown-horse
+63 82 244 194
+
+horse_040
+snowy-field
+11 209 252 250
+
+horse_040
+dusthaze-sky
+5 3 175 85
+
+horse_071
+green-field
+11 192 259 250
+
+horse_071
+brown-horse
+69 38 220 200
+
+horse_071
+tree
+112 10 245 73
+
+mountain_033
+snowy-mountain
+9 75 261 221
+
+mountain_033
+blue-sky
+7 2 248 81

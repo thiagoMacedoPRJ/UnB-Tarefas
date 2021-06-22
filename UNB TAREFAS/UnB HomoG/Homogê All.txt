@@ -1,0 +1,126 @@
+Lição] Listas Homogêneas
+O que são listas homogêneas?
+Uma lista em Python é um tipo de dado list, uma forma específica de organizar uma sequência de elementos. O conjunto dos elementos é definido por colchetes, e os elementos são separados por vírgulas. Uma lista é dita homogênea quando todos os seus elementos são do mesmo tipo.
+
+>>> lista_vazia = []
+>>> lista_de_numeros = [1, 2, 3, 4]
+>>> lista_de_simbolos = ['H', 'A', 'L', '9', '0', '0', '0']
+
+
+O tipo de dado list é um pouco mais "flexível"!
+
+>>> lista = [0] * 4
+>>> for i in range(len(lista)):
+        lista[i] = 2 ** i
+>>> lista
+[1, 2, 4, 8]
+>>> lista[2] = 6
+>>> lista
+[1, 2, 6, 8]
+
+listas são MUTAVEIS
+
+
+
+
+FUNÇÃO DOBRADA
+
+
+
+
+
+
+Conheça as estruturas de dados!
+É muito importante entender como  elas organizam as informações e como utilizá-las corretamente. Listas têm certas funções "embutidas", que são extremamente úteis. Você pode conhecê-las melhor aqui, e tente se familiarizar com elas: certamente te ajudará muito a resolver problemas de programação.
+
+ 
+como manipular uma lista com tipos diferentes de dados;
+como manipular uma lista dentro de uma função; e
+os métodos básicos de manipulação de um objeto list.
+
+
+
+
+Uma lista em Python é um tipo de dado list, uma forma específica de organizar uma sequência de elementos. O conjunto dos elementos é definido por colchetes, e os elementos são separados por vírgulas. Uma lista é dita heterogênea quando os seus elementos pertencem a mais de um tipo diferente, ou seja, nem todos os elementos são do mesmo tipo.
+
+>>> lista_vazia = []
+>>> lista1 = [1, 'a', 'alecrim', 3.14]
+>>> lista2 = ['HAL', 9000]
+>>> lista3 = ['Fulano', 'da Silva', 26]
+
+
+
+
+Pare! Pense!
+Programação tem muito a ver com abstração, a habilidade de concentrar nos aspectos essenciais de um contexto e ignorando características menos importantes. Por exemplo, o funcionamento de uma lista é um aspecto essencial de estruturas de dados, independentemente do tipo de dado armazenado na lista.
+
+No contexto da UnB, podemos considerar que a nota de um aluno pode ser representada por um valor real (float) em um programa. Como, de acordo com o plano de ensino, a menção de um aluno é o resultado de uma série de avaliações, podemos usar uma coleção de dados homogêneos para armazenar o conjunto de notas do aluno, por exemplo em um list (uma sequência de notas). Assim, definimos que um aluno é um list de floats.
+
+Como list é um tipo de dado próprio, podemos expandir/abstrair essa noção e usar outro list para organizar um conjunto de (notas de) alunos - é bem simples imaginar um programa processando as notas de uma turma inteira desse jeito. Assim podemos definir (as notas de) uma turma, que é um list de alunos, ou um conjunto de lists (de notas) floats.
+
+Seguindo o raciocínio,  podemos expandir/abstrair essa noção e usar outro list para organizar um conjunto de (notas de) turmas - são pelo menos 7 turmas de APC (imaginem quantas de Cálculo 1!). Assim podemos definir (as notas de) uma disciplina, que é um list de turmas, ou um conjunto de lists (de alunos) de lists (de notas) floats.
+
+Podemos ampliar isso para uma Unidade, organizando as disciplinas em outro list (um conjunto de list de list de list de floats), e depois ampliar ainda mais para a própria UnB, organizando as notas de cada Unidade em mais um list. (poderíamos continuar agrupando instituições, bairros, cidades, estados, países!)
+
+
+
+
+Considere que um string pode ser visto como um conjunto de símbolos. Se um list de strings é um conjunto de strings, então é, na verdade, um conjunto de conjuntos de símbolos! Strings não são lists, mas a ideia é a mesma. Se tenho um list de símbolos, posso criar também um list desses lists.
+
+>>> jogo_da_velha =  [['X', ' ', ' '],  # 1o elemento (lista de símbolos)
+                      ['O', 'X', 'O'],  # 2o elemento (lista de símbolos)
+                      ['X', ' ', 'O']]  # 3o elemento (lista de símbolos)
+>>> jogo_da_velha[0]
+['X', ' ', ' ']
+>>>jogo_da_velha[0][0]
+'X'
+>>>jogo_da_velha[0][2]
+' '
+>>>jogo_da_velha[0][2] = 'X'
+>>> for linha in jogo_da_velha:
+        print(linha)
+['X', ' ', 'X']
+['O', 'X', 'O']
+['X', ' ', 'O']
+
+
+
+
+
+
+list e string são tipos de dados diferentes! Mas muitas coisas funcionam do mesmo jeito para ambas (felizmente!).
+
+>>> lista = ['C', 'a', 'm', 'a', 'r', 'a', 'd', 'a']
+>>> string = 'Camarada'
+>>> print(lista)
+['C', 'a', 'm', 'a', 'r', 'a', 'd', 'a']
+>>> print(string)
+Camarada
+>>> lista == string
+False
+>>> len(lista) == len(string)
+True
+>>> lista[1] == string[1]
+True
+>>> lista[-2] == string[-2]
+True
+>>> for s in lista:
+        print(s) 
+C
+a
+m
+a
+r
+a
+d
+a
+>>> for s in string:
+        print(s)
+C
+a
+m
+a
+r
+a
+d
+a
